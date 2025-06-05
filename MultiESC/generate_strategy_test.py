@@ -55,6 +55,7 @@ parser.add_argument("--save_strategy", default="epoch", type=str)
 parser.add_argument("--load_best_model_at_end", default=True)
 parser.add_argument("--ignore_pad_token_for_loss", default=True)
 parser.add_argument("--predict_with_generate", default=True)
+parser.add_argument("--gradient_accumulation_steps", default=1, type=int)
 
 parser.add_argument("--data_type", default=4, type=int)
 parser.add_argument("--model_type", default=0, type=int) # 0 norm bart  2 hierarchical bart
