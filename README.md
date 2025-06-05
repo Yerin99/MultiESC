@@ -33,6 +33,12 @@ Download it and save in the folder ./MultiESC/metric
 CUDA_VISIBLE_DEVICES=0,1 python generate_strategy_norm_train.py --data_type=3 --model_type=1  --output_dir=./final_output/bart_output  --learning_rate=2e-5  --num_train_epochs=15 --lr2=2e-5 --with_cause --with_strategy
 ```
 
+If a CUDA out-of-memory error occurs, try using this.
+
+```bash
+CUDA_VISIBLE_DEVICES=0,1,2,3 python generate_strategy_norm_train.py --data_type=3 --model_type=1 --output_dir=./final_output/bart_output --learning_rate=2e-5 --num_train_epochs=15 --lr2=2e-5 --with_cause --with_strategy --per_device_train_batch_size=8
+```
+
 2. Data augmentation for training the feedback predictor. The augmented data will be save in ./final_data/{train， valid,test}_extend_beam*.pk.
 
 ```bash
