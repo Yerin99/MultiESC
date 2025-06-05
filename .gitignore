@@ -2,3 +2,5 @@ MODEL/*
 MultiESC/metric/*
 
 **/__pycache__/*
+
+MultiESC/final_output/*
